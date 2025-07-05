@@ -7,19 +7,17 @@ const navPages = [
 ];
 ---
 
-<nav
-    class="flex items-center justify-between p-4 bg-neutral-800 shadow-2xl border-b border-neutral-700"
+<header
+    class="flex flex-col md:flex-row items-center justify-between py-4 w-full px-4 md:px-32 bg-neutral-800 drop-shadow-2xl border-b border-neutral-700"
 >
-    <div class="flex items-center ms-15">
-        <a href="/" class="flex items-center text-lg font-bold">
-            <Logo class="mr-2 h-12" />
-        </a>
-    </div>
-    <div class="absolute left-1/2 transform -translate-x-1/2">
-        <ul class="flex space-x-10">
+    <a href="/" class="flex items-center text-lg font-bold mb-4 md:mb-0">
+        <Logo class="h-12 hover:scale-105 transition-all" />
+    </a>
+    <div class="flex-1 flex justify-center">
+        <ul class="flex flex-col md:flex-row items-center gap-4 md:gap-12 font-semibold text-base w-full md:w-auto justify-center">
             {
                 navPages.map((item) => (
-                    <li class="hover:text-gray-300 font-semibold">
+                    <li class="hover:text-gray-300 p-3 cursor-pointer w-full md:w-auto text-center">
                         <a
                             class="group transition duration-300"
                             aria-current="page"
@@ -33,4 +31,4 @@ const navPages = [
             }
         </ul>
     </div>
-</nav>
+</header>
