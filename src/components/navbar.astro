@@ -1,18 +1,36 @@
 ---
-import Logo from './Logo.astro';
+import Logo from "./Logo.astro";
+const navPages = [
+    { name: "Proyectos", href: "/projects" },
+    { name: "Sobre Nosotros", href: "/about" },
+    { name: "Contacto", href: "/contact" },
+];
 ---
-<nav class="flex items-center justify-between p-4 bg-neutral-800 shadow-2xl mb-5">
-    <div class="flex items-center">
-        <a href="/" class="flex items-center text-white text-lg font-bold">
+
+<nav
+    class="flex items-center justify-between p-4 bg-neutral-800 shadow-2xl mb-5 border-b border-neutral-700"
+>
+    <div class="flex items-center ms-15">
+        <a href="/" class="flex items-center text-lg font-bold">
             <Logo class="mr-2 h-12" />
         </a>
     </div>
     <div class="absolute left-1/2 transform -translate-x-1/2">
-        <ul class="flex space-x-4">
-            <li><a href="/" class="text-white hover:text-gray-300 hover:underline">Home</a></li>
-            <li><a href="/about" class="text-white hover:text-gray-300 hover:underline">Sobre Nosotros</a></li>
-            <li><a href="/projects" class="text-white hover:text-gray-300 hover:underline">Proyectos</a></li>
-            <li><a href="/contact" class="text-white hover:text-gray-300 hover:underline">Contacto</a></li>
+        <ul class="flex space-x-10">
+            {
+                navPages.map((item) => (
+                    <li class="hover:text-gray-300 font-semibold">
+                        <a
+                            class="group transition duration-300"
+                            aria-current="page"
+                            href={item.href}
+                        >
+                            {item.name}
+                            <span class="block h-0.5 bg-neutral-200 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+                        </a>
+                    </li>
+                ))
+            }
         </ul>
     </div>
 </nav>
