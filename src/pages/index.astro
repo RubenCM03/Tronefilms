@@ -6,8 +6,16 @@ import Logo from '../components/Logo.astro';
 ---
 
 <Layout title='Tronefilms' description='Tronefilms es una pequeña productora de cine y cortometrajes creada por un grupo de amigos apasionados por el cine.'>
-	<div class="mx-auto text-center mb-8 lg:mb-16">
-		<h1 class="mb-4 text-5xl tracking-tight font-extrabold">Tronefilms</h1>
-		<p class="mb-8 text-lg font-normal">Tronefilms es una pequeña productora de cine y cortometrajes creada por un grupo de amigos apasionados por el cine.</p>
-	</div>
+	<section class="mx-auto text-center mb-8 lg:mb-16 grid grid-cols-1 md:grid-cols-3">
+		<img src="img/laultimacarta.webp" alt="Portada de La Última Carta" class="w-full h-auto object-cover md:col-span-2 md:row-span-1">
+		<div class="flex flex-col bg-neutral-900 border-t border-neutral-800 items-center justify-center md:border-t-0 md:border-s md:col-span-1 md:row-span-1">
+			<div class="w-full max-w-xs my-8 md:my-10">
+				<h3 class="text-4xl text-left mb-8 font-light">Tronefilms</h3>
+				<h2 class="font-bold text-5xl text-left hover:text-neutral-300 transition">La Ultima Carta</h2>
+				<a class="font-semibold text-3xl text-left text-red-100 hover:text-red-800 transition block mt-4" href="https://youtu.be/C1qhXPE-HdQ" target="_blank">Ver ahora</a>
+			</div>
+		</div>
+	</section>
+	<h1 class="mb-4 text-5xl tracking-tight font-extrabold">Tronefilms</h1>
+	<p class="mb-8 text-lg font-normal">Tronefilms es una pequeña productora de cine y cortometrajes creada por un grupo de amigos apasionados por el cine.</p>
 </Layout>
