@@ -21,7 +21,10 @@ const { title, description } = Astro.props;
 	</head>
 	<body>
 		<Navbar />
-		<slot />
+		<slot name="header" />
+		<div class="mt-10">
+			<slot />
+		</div>
 	</body>
 </html>
 
