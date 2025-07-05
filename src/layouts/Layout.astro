@@ -1,5 +1,6 @@
 ---
 import './src/styles/global.css';
+import Navbar from '../components/navbar.astro';
 interface Props {
 	title: string;
 	description: string;
@@ -17,13 +18,13 @@ const { title, description } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<Navbar />
 		<slot />
 	</body>
 </html>
 
 <style is:global>
 	html {
-		font-family: Go;
 		background: #343434;
 		background-size: 224px;
 		color-scheme: dark light;
