@@ -2,11 +2,12 @@
 import Layout from '@/layouts/Layout.astro';
 import Header from '@/components/header-index.astro';
 import Logo from '@/components/Logo.astro';
+
 ---
 
 <Layout title='Tronefilms' description='Tronefilms es una pequeña productora de cine y cortometrajes creada por un grupo de amigos apasionados por el cine.'>
 	<Header slot="header" />
-	<h1 class="mb-4 text-5xl tracking-tight font-extrabold text-center">TRONEFILMS</h1>
-	
-	
+	<div class="delay-[300ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0" data-taos-offset="300">
+		<h1 class="text-4xl md:text-6xl font-bold text-center text-white mb-4">Tronefilms</h1>
+	</div>
 </Layout>
