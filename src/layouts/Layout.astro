@@ -1,6 +1,6 @@
 ---
 import '@/styles/global.css';
-import Navbar from '@/components/ddd.astro';
+import Navbar from '@/components/navbar.astro';
 import { ViewTransitions } from 'astro:transitions';
 
 interface Props {
@@ -15,6 +15,7 @@ const { title, description } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+		<link rel="preload" href="/_astro/about.gLStqEWT.css" as="style">
 		<meta name="description" content={description} />
 		<title>{title}</title>
 		<ViewTransitions />
